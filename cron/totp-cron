@@ -1,0 +1,1 @@
+*/2 * * * * python3 /app/request_seed.py >> /var/log/cron.log 2>&1
