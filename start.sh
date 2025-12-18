@@ -1,6 +1,7 @@
-#!/bin/sh
-# Start cron in foreground
-cron -f &
+#!/bin/bash
 
-# Start FastAPI server with uvicorn
-uvicorn app:app --host 0.0.0.0 --port 8080
+# Start cron daemon in the background
+service cron start
+
+# Start FastAPI with uvicorn
+exec python -m uvicorn app:app --host 0.0.0.0 --port 8080
