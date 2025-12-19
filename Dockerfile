@@ -43,4 +43,4 @@ RUN mkdir -p /data /cron
 
 EXPOSE 8080
 
-CMD ["./start.sh"]
+ENTRYPOINT ["/bin/bash", "./start.sh"]
